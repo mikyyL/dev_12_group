@@ -1,0 +1,5 @@
+Написать как можно больше запросов на сервисах
+https://rapidapi.com/developer/dashboard и
+https://reqres.in/
+
+Скачать Postman и попробовать получить в нем ответы от api.
