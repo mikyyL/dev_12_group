@@ -21,7 +21,8 @@ class ResurceUser:
         for key, value in data_json.items():
             for i in value.keys():
                 d[i] = value[i]
-            return d  # [print(f"{i}, -> {value[f'{i}']}")]
+                print(f"{i}, -> {value[f'{i}']}")
+            return d 
 
 
 
