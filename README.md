@@ -1,4 +1,4 @@
-# dev_place_14_group
+# dev_place_12_group
 # Сначала создаем ветку feature/homework{n}/name_secondname
 # ( как пример для 19 дз будет ветка feature/homework19/artem_mikulich)
 # В папке homework19 создаете папку name_secondname_homework19(artem_mikulich_homework19).
