@@ -15,26 +15,18 @@ class KgToPounds:
     def to_pounds(self):
         return self.__kg * 2.205
 
-    def set_kg(self, new_kg):
+    @property
+    def kg(self):
+        return self.__kg
+
+    @kg.setter
+    def kg(self, new_kg):
         if isinstance(new_kg, (int, float)):
             self.__kg = new_kg
         else:
             return f"Килограммы задаются только числами"
 
-    @property
-    def get_kg(self):
-        return self.__kg
-
-    def property(self, set_kg):
-        def wrapper():
-            set_kg()
-
-        return wrapper()
-
 
 kg_to_pounds = KgToPounds(10)
 print(kg_to_pounds.to_pounds())
-# kg_to_pounds.set_kg(20)
-# print(kg_to_pounds.get_kg())
-print(kg_to_pounds.get_kg())
-
+print(kg_to_pounds.kg())

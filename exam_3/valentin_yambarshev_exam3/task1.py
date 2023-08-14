@@ -8,17 +8,22 @@
 
 class TriangleChecker:
 
-    def __init__(self, positive_num):
-        self.positive_num = positive_num
+    def __init__(self, sides):
+        self.sides = sides
 
     def is_triangle(self):
-        if self.positive_num > 0:
+        if self.sides[0] + self.sides[1] >= self.sides[2] and self.sides[1] + self.sides[2] >= self.sides[0] and \
+                self.sides[2] + self.sides[0] >= self.sides[1]:
             return f'{"Ура, можно построить треугольник!"}'
-        elif self.positive_num < 0:
+        elif self.sides[0] < 0 or self.sides[1] < 0 or self.sides[2] < 0:
             return f'{"С отрицательными числами ничего не выйдет!"}'
         else:
             return f'{"Жаль, но из этого треугольник не сделать."}'
 
 
-triangleChecker = TriangleChecker(0)
+triangleChecker = TriangleChecker([2, 3, 4])
 print(triangleChecker.is_triangle())
+triangleChecker1 = TriangleChecker([10, 2, 3])
+print(triangleChecker1.is_triangle())
+triangleChecker2 = TriangleChecker([1, -2, -3])
+print(triangleChecker2.is_triangle())
